@@ -7,12 +7,16 @@
 
 /* GENERAL */
 
+body {
+    background-color: darkgreen;
+}
+.container {
+    height: 100vh;
+    background-color:rgb(221, 63, 63);
+}
 
-
-/* HEADER */
-
-
-/* MAIN */
-
-
-/* FOOTER */
+button {
+    padding: 10px;
+    font-size: larger;
+    border-radius: 10px;
+}
