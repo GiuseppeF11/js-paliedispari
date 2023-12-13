@@ -14,7 +14,7 @@ const evenBtn = document.getElementById('evenBtn');
 const oddBtn = document.getElementById('oddBtn');
 
 // INSERISCO IL PROMPT E RECUPERO IL NUMERO INSERITO DALL'UTENTE
-let numUser = prompt('Inserisci un numero tra 1 e 5')
+let numUser = parseInt (prompt('Inserisci un numero tra 1 e 5'));
 console.log('Numero Utente: ' + numUser + ' ' +typeof numUser);
 document.getElementById('numUser').innerHTML = 'numUser: ' + numUser;
 
@@ -23,7 +23,7 @@ let numCpu = (getRndInteger(1 , 5));
 console.log('Numero Cpu: ' + numCpu + ' ' +typeof numCpu);
 
 // SOMMO I DUE VALORI OTTENUTI
-let UserAndCpu = sum(+numUser , numCpu)
+let UserAndCpu = sum(numUser , numCpu)
 console.log('La somma dei numeri è: ' + UserAndCpu + ' ' + typeof UserAndCpu)
 
 //
@@ -68,3 +68,13 @@ function sum (n1 , n2) {
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+
+
+// FUNZIONE PER RICARICARE LA PAGINA
+const refreshBtn = document.getElementById("refreshBtn");
+
+function handleClick() {
+  history.go(0);
+}
+
+refreshBtn.addEventListener("click", handleClick);
